@@ -11,19 +11,14 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
+      // checking if item is already in cart
       const isItem = state.cartItem.some((d) => d.id === action.payload.id);
-      console.log(isItem);
       if (isItem) {
+        // run loop to add in quantiy
         const item = state.cartItem.map((d) => {
           if (d.id === action.payload.id) {
-            console.log("hello");
-            console.log(d.id === action.payload.id);
-            console.log(d.id, action.payload.id);
             return { ...d, quantity: parseInt(d.quantity) + 1 };
           } else {
-            console.log("hi");
-            console.log(d.id === action.payload.id);
-            console.log(d.id, action.payload.id);
             return {
               ...d,
             };
@@ -53,17 +48,12 @@ const cartSlice = createSlice({
     decrement: (state, action) => {
       const item = state.cartItem.map((d) => {
         if (d.id === action.payload.id) {
-          console.log("hello");
-          console.log(d.id === action.payload.id);
-          console.log(d.id, action.payload.id);
+          // if item quantity is 0 then return null instead of item
           if (parseInt(d.quantity) - 1 === 0) {
             return null;
           }
           return { ...d, quantity: parseInt(d.quantity) - 1 };
         } else {
-          console.log("hi");
-          console.log(d.id === action.payload.id);
-          console.log(d.id, action.payload.id);
           return {
             ...d,
           };
