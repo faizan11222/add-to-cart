@@ -16,3 +16,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ### please run the command `npm run test` for test cases
+
+## ------------------------------------------------------------------------------------------------
+
+## Techniques I've used for building the Application:
+- for API setup, I have used the JSON server
+- I have used the functional components
+- I have used Redux for State Managment
+- For getting API, I have used Redux middleware that is `Redux thunk` with `axios`
+- For making the UI, I have used `Material UI` that is React UI library
+- Also, I have used Styled components
+- For writing test cases, I have used `Jest`
+
+
+## How we can more improve this Application
+- First of all, I have used the latest concepts for building this Application.
+- But if we still want to improve the application, then we need to imrpove the User experience usng the following techniques:
+  -> also put login & signup option for user
+  -> So if user will buy the product after signing up (login), then we can store the user's Cart information
+  -> We can use Local Storage for storing the products information that user added into his Cart. 
