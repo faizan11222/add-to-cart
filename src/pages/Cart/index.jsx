@@ -45,8 +45,8 @@ const Cart = () => {
                 <TableCell>Image</TableCell>
                 <TableCell align="left">Name</TableCell>
                 <TableCell align="center">Quantity</TableCell>
-                <TableCell align="right">Price</TableCell>
-                <TableCell align="right">Total</TableCell>
+                <TableCell align="right">Price ($)</TableCell>
+                <TableCell align="right">Total ($)</TableCell>
                 <TableCell align="right"></TableCell>
               </TableRow>
             </TableHead>
@@ -86,8 +86,8 @@ const Cart = () => {
                       +
                     </Button>
                   </TableCell>
-                  <TableCell align="right">{d.price}</TableCell>
-                  <TableCell align="right">{d.price * d.quantity}</TableCell>
+                  <TableCell align="right">$ {d.price}</TableCell>
+                  <TableCell align="right">$ {d.price * d.quantity}</TableCell>
                   <TableCell align="right">
                     <DeleteIcon
                       data-testid="cart-delete"
@@ -104,11 +104,11 @@ const Cart = () => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell colSpan={4} align="right">
-                  <Typography variant="h6">Sub Total</Typography>
+                  <Typography variant="h6">Sub Total ($)</Typography>
                 </TableCell>
                 <TableCell align="right">
                   <Typography color={"black"} variant="body1">
-                    {getSubTotal(cartItem)}
+                    $ {getSubTotal(cartItem)}
                   </Typography>
                 </TableCell>
               </TableRow>
